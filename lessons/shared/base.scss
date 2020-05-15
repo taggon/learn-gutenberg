@@ -1,0 +1,71 @@
+@import "~@wordpress/base-styles/colors";
+@import "~@wordpress/base-styles/variables.scss";
+@import "~@wordpress/base-styles/mixins";
+@import "~@wordpress/base-styles/breakpoints";
+@import "~@wordpress/base-styles/animations";
+@import "~@wordpress/base-styles/z-index";
+@import "~@wordpress/editor/build-style/editor-styles";
+@import "~@wordpress/editor/build-style/style";
+@import "~@wordpress/components/build-style/style";
+@import "~@wordpress/block-editor/build-style/style";
+@import "~@wordpress/block-library/build-style/editor";
+@import "~@wordpress/block-library/build-style/theme";
+@import "~@wordpress/block-library/build-style/style";
+
+:root {
+    @include reset;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a, div {
+    outline: 0;
+}
+
+.editor-styles-wrapper {
+    font-family: $editor-font;
+    font-size: $editor-font-size;
+    line-height: $editor-line-height;
+    color: $dark-gray-900;
+    margin-right: $sidebar-width;
+    padding-top: 50px;
+
+    p {
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+.editor-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $sidebar-width;
+    border-left: $border-width solid $light-gray-500;
+    height: auto;
+    overflow: auto;
+}
+
+.wp-block {
+    &[data-type="core/paragraph"] {
+        padding: 12px;
+        margin: 5px 0;
+    }
+
+    &[data-type="core/heading"] {
+        padding: 12px;
+        margin: 0;
+    }
+
+    &:focus {
+        outline: 1px solid $light-gray-600;
+    }
+
+    &:hover:not(:focus) {
+        outline: 1px solid $blue-wordpress-700;
+    }
+}

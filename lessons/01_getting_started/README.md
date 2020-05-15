@@ -53,24 +53,24 @@ We're going to check the details of Slot and Fill in the following examples. Let
 
 This component actually renders `RegistryProvider`, that provides a global store of editor state, with a few enhancements. It is simple yet important for understanding how the editor works. I'd recommend you to read [the short document](https://github.com/WordPress/gutenberg/tree/e01fb661f7118d94b57d29ac7cb01f0188e5ecf5/packages/block-editor/src/components/provider) thoroughly.
 
-# BlockInspector
+## BlockInspector
 
 It renders the inspector for the selected component. It also cotain slots so components can add their own inspector controls to the area.
 
 ![BlockInspector](./assets/block-inspector.png)
 
-# Popover
+## Popover
 
 It's a component renders popovers. You may notice the application code only uses a popup slot that will be filled with block toolbars.
 
-# WritingFlow
+## WritingFlow
 
 `<WritingFlow />` is a component helps users have seamless editing experience by moving focus, modifying selection, or showing/hiding components in respond to observed keyboard/mouse events.
 
-# BlockList
+## BlockList
 
 This is the core of the editor. It renders the content blocks.
 
-# ObserveTyping
+## ObserveTyping
 
 It manages the editor's internal typing flag. I will handle this component later.
